@@ -5,11 +5,6 @@ const { CatalystClient, DeploymentBuilder } = require("dcl-catalyst-client")
 
 const catalystUrl = "https://peer-ue-2.decentraland.zone"
 
-let options = {
-  vus: 200,
-  duration: "600s",
-}
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
