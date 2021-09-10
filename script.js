@@ -17,10 +17,17 @@ function sleep(ms) {
 const { address, privateKey, publicKey } = EthCrypto.createIdentity()
 
 const setup = async () => {
+  const randomFileSufix = (Math.random() + 1).toString(36).substring(7)
+
+  const contentPaths = [`aFile-${randomFileSufix}`, `anotherFile-${randomFileSufix}`, `aThirdFile-${randomFileSufix}`]
+
+  const buffers = new Map(contentPaths.map((filePath) => [filePath, Buffer.from("Hello")]))
+
   const { entityId, files } = await DeploymentBuilder.buildEntity({
     type: EntityType.PROFILE,
     pointers: [address],
-    version: EntityVersion.V4,
+    version: EntityVersion.V3,
+    files: buffers,
   })
 
   // Signing message
