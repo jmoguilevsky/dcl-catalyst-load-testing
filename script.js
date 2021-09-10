@@ -18,10 +18,11 @@ const { address, privateKey, publicKey } = EthCrypto.createIdentity()
 
 const setup = async () => {
   const randomFileSufix = (Math.random() + 1).toString(36).substring(7)
+  const randomFileContent = `${randomFileSufix}-${(Math.random() + 1).toString(36).substring(2)}`
 
   const contentPaths = [`aFile-${randomFileSufix}`, `anotherFile-${randomFileSufix}`, `aThirdFile-${randomFileSufix}`]
 
-  const buffers = new Map(contentPaths.map((filePath) => [filePath, Buffer.from("Hello")]))
+  const buffers = new Map(contentPaths.map((filePath) => [filePath, Buffer.from(randomFileContent)]))
 
   const { entityId, files } = await DeploymentBuilder.buildEntity({
     type: EntityType.PROFILE,
