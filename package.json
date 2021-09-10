@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/k6": "^0.32.2"
+    "@types/k6": "^0.32.2",
+    "dcl-catalyst-client": "^8.1.0",
+    "dcl-catalyst-commons": "^7.0.0",
+    "dcl-crypto": "^2.3.0",
+    "decentraland": "^3.8.1",
+    "eth-crypto": "^2.0.0"
   }
 }
