@@ -2,7 +2,7 @@
 // Explain in simple words what's the purpose of this PR
 
 # Changes
-// Explain in technical terms the changes and if needed the reason of those changes
+// Explain in technical terms the changes and if needed the reason for those changes
 
 # This pr contains:
 - [ ] Unit tests
